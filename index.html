@@ -24,6 +24,7 @@
     justify-content: space-between;
     align-items: center;
     color: #6C6040;
+    text-transform: uppercase;
   }
 
   .brand {
@@ -35,13 +36,58 @@
     list-style: none;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    /* align-items: center; */
   }
 
-  .nav-link {
+  /* .nav-link {
     text-decoration: none;
     margin: 10px;
     color: #6C6040;
+  } */
+
+  .topnav * {
+    text-decoration: none;
+    color: #6C6040;
+    padding: 5px;
+  }
+
+  .dropdownLink {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    ul.topnav li a.nav-link {
+      display: none;
+    }
+
+    .dropdownLink {
+      display:block;
+    }
+
+    ul.topnav.responsive {
+      flex-direction: column;
+      text-align: right;
+      padding-bottom: 20px;
+    }
+
+    ul.topnav.responsive .nav-link {
+      display: block;
+    }
+
+    ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
+        /*instead of adding this i think we could just move the "position: relative and top: 30px" into the ul.topnav.responsive li a.nav-link rule and not create the new ul.topnav.responsive li rule. That way, all of the list items besides the trigram would move because the trigram has a different class. then we wouldn't have to reset the trigram, it would just stay put. */
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    ul.topnav.responsive li {
+        position: relative;
+        top: 30px;
+        right: 30px;
+    }
+
   }
 
 </style>
@@ -50,13 +96,14 @@
   <!-- Navbar -->
 
   <nav class="navbar">
-    <div class="brand">CourtneyLynnPics</div>
-    <ul class="topnav">
+    <div class="brand">Courtney Lynn Pics</div>
+    <ul class="topnav" id="navbar-toggle">
       <li><a class="nav-link" href="#">Home</a></li>
       <li><a class="nav-link" href="#">About</a></li>
       <li><a class="nav-link" href="#">Gallery</a></li>
       <li><a class="nav-link" href="#">Services</a></li>
       <li><a class="nav-link" href="#">Contact</a></li>
+      <li class="dropdownLink"><a onclick="toggleDropdown()" href="">&#9776;</a></li>
     </ul>
   </nav>
   
@@ -111,4 +158,15 @@
     </div>
   </div> -->
 
+
+
+
 </body>
+
+<script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"></script>
+<!-- got this by searching "jquery cdn" and copying newest version cdn. Could download jquery and include it in project but for this project we're just going to access it this way -->
+
+<script src="main.js"></script>
