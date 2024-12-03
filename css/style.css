@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Bogart';
+    src: url('../fonts/Bogart-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+ 
+ 
+ body {
+    margin: 0;
+    font-family: "Bogart", sans-serif;
+    color: #6C6040;
+  }
+
+  .navbar {
+    background-color: #D1C7C0;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-family: "Hanken Grotesk", sans-serif;
+  }
+
+  .brand {
+    margin: 20px;
+    font-weight: bold;
+  }
+
+  .topnav {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+  }
+
+  /* .nav-link {
+    text-decoration: none;
+    margin: 10px;
+    color: #6C6040;
+  } */
+
+  .topnav * {
+    text-decoration: none;
+    color: #6C6040;
+    padding: 5px;
+  }
+
+  .dropdownLink {
+    display: none;
+  }
+
+  .intro-section {
+    /* display: flex; */
+    /* margin: auto; */
+    position: relative;
+  }
+  .intro-pic {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .title-box {
+    background-color: #EFE9E4;
+    position: absolute;
+    border-radius: 30px;
+    padding: 20px;
+    top: 5%;
+    left: 5%;
+    font-size: clamp(1rem, 2.5vw, 3rem);
+  }
+
+
+
+
+
+  @media (max-width: 760px) {
+    ul.topnav li a.nav-link {
+      display: none;
+    }
+
+    .dropdownLink {
+      display:block;
+    }
+
+    ul.topnav.responsive {
+      flex-direction: column;
+      text-align: right;
+      padding-bottom: 20px;
+    }
+
+    ul.topnav.responsive .nav-link {
+      display: block;
+    }
+
+    ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
+        /*instead of adding this I think we could just move the "position: relative and top: 30px" into the ul.topnav.responsive li a.nav-link rule and not create the new ul.topnav.responsive li rule. That way, all of the list items besides the trigram would move because the trigram has a different class. then we wouldn't have to reset the trigram, it would just stay put. */
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    ul.topnav.responsive li {
+        position: relative;
+        top: 30px;
+        right: 20px;
+    }
+
+  }
