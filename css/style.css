@@ -18,6 +18,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-transform: uppercase;
     font-family: "Hanken Grotesk", sans-serif;
   }
@@ -46,35 +47,115 @@
     padding: 5px;
   }
 
-  .dropdownLink {
+  .nav-link {
     display: none;
+  }
+
+  .dropdownLink {
+    display: block;
+  }
+
+  ul.topnav.responsive {
+    flex-direction: column;
+    text-align: right;
+    padding-bottom: 20px;
+  }
+
+  ul.topnav.responsive .nav-link {
+    display: block;
+  }
+
+  ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+  }
+
+  ul.topnav.responsive li {
+      position: relative;
+      top: 30px;
+      right: 20px;
   }
 
   .intro-section {
     /* display: flex; */
     /* margin: auto; */
     position: relative;
+    /* height: 100vh; */
+    overflow: hidden;
   }
+
   .intro-pic {
     width: 100%;
+    display: block; /* removes extra container space beneath image */
+    /* height: 100%; */
+    /* object-fit: cover; */
+    /* object-position: top 0 right 10px; */
+    /* object-position: center 40%;
+    transition: transform 0.3s ease; Adds smooth zoom effect */
+
     /* margin: auto; */
   }
 
-  .title-box {
-    background-color: #EFE9E4;
+  .title-container {
     position: absolute;
-    border-radius: 30px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     top: 5%;
     left: 5%;
-    font-size: clamp(1rem, 2.5vw, 3rem);
+  }
+
+  .title-box {
+    /* background-color: #EFE9E4; */
+    background-color: #D1C7C0;
+    /* position: absolute;
+    top: 5%;
+    left: 5%; */
+    margin: auto;
+    padding: 20px;
+    border-radius: 30px;
+    /* font-size: clamp(1rem, 2.5vw, 3rem); */
+    font-size: clamp(1rem, 4vw, 5rem)  
+}
+
+  .title-secondary {
+    /* background-color: #EFE9E4; */
+    background-color: #D1C7C0;
+    /* position: absolute; */
+    /* top: 17%;
+    left: 5%; */
+    margin-top: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.5vw;
+    align-self: flex-start;
+  }
+
+  .second-section {
+    background-color: grey;
+    height: 150vh;
+  }
+
+  @media (min-width:760px) {
+
+    ul.topnav li a.nav-link {
+        display: block;
+    }
+
+    .dropdownLink {
+        display: none;
+    }
+
+
+
+
   }
 
 
 
-
-
-  @media (max-width: 760px) {
+  /* @media (max-width: 760px) {
     ul.topnav li a.nav-link {
       display: none;
     }
@@ -94,7 +175,6 @@
     }
 
     ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
-        /*instead of adding this I think we could just move the "position: relative and top: 30px" into the ul.topnav.responsive li a.nav-link rule and not create the new ul.topnav.responsive li rule. That way, all of the list items besides the trigram would move because the trigram has a different class. then we wouldn't have to reset the trigram, it would just stay put. */
         display: block;
         position: absolute;
         top: 15px;
@@ -107,4 +187,4 @@
         right: 20px;
     }
 
-  }
+  } */
