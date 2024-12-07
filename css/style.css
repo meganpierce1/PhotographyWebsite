@@ -33,11 +33,13 @@
     font-weight: bold;
   }
 
-  .topnav {
+  .menu {
     list-style: none;
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
+    align-items: center;
+    padding: 0;
+    margin: 10px;
   }
 
   /* .nav-link {
@@ -46,44 +48,54 @@
     color: #6C6040;
   } */
 
-  .topnav * {
+  .menu * {
     text-decoration: none;
     color: #6C6040;
   }
 
-  .topnav .nav-link {
+  .menu .menu-item {
     padding: 5px;
   }
 
-  .nav-link {
+  .menu-item {
     display: none;
+    order: 1;
   }
 
   .dropdownLink {
     display: block;
+    order: 0;
   }
 
-  ul.topnav.responsive {
+  .menu.open {
     flex-direction: column;
     text-align: right;
     padding-bottom: 20px;
+    align-items: flex-end;
   }
 
-  ul.topnav.responsive .nav-link {
+  ul.menu.open li:nth-child(n-1) {
+    order: -1
+  }
+
+  ul.menu.open .menu-item {
     display: block;
+    order: 0;
   }
 
-  ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
+  ul.menu li.dropdownLink, ul.menu.open li.dropdownLink {
       display: block;
-      position: absolute;
+      position: absolute; 
       top: 8px;
-      right: 20px;
+      right: 15px;
   }
 
-  ul.topnav.responsive li {
+  ul.menu.open li {
       position: relative;
       top: 30px;
-      right: 20px;
+      /* right: 20px; */
+      align-self: right;
+      text-align: right;
   }
 
   .intro-section {
@@ -156,11 +168,12 @@
         font-size: 1rem;
     }
 
-    ul.topnav li a.nav-link {
+    ul.menu li a.menu-item {
         display: block;
+        order: 0;
     }
 
-    .dropdownLink a{
+    .dropdownLink a {
         display: none;
     }
 
@@ -172,7 +185,7 @@
 
 
   /* @media (max-width: 760px) {
-    ul.topnav li a.nav-link {
+    ul.menu li a.nav-link {
       display: none;
     }
 
@@ -180,24 +193,24 @@
       display:block;
     }
 
-    ul.topnav.responsive {
+    ul.menu.open {
       flex-direction: column;
       text-align: right;
       padding-bottom: 20px;
     }
 
-    ul.topnav.responsive .nav-link {
+    ul.menu.open .nav-link {
       display: block;
     }
 
-    ul.topnav li.dropdownLink, ul.topnav.responsive li.dropdownLink {
+    ul.menu li.dropdownLink, ul.menu.open li.dropdownLink {
         display: block;
         position: absolute;
         top: 15px;
         right: 20px;
     }
 
-    ul.topnav.responsive li {
+    ul.menu.open li {
         position: relative;
         top: 30px;
         right: 20px;
