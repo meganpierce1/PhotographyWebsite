@@ -84,38 +84,27 @@
   }
 
   ul.menu li.dropdownLink, ul.menu.open li.dropdownLink {
-      display: block;
-      position: absolute; 
-      top: 8px;
-      right: 15px;
+    display: block;
+    position: absolute; 
+    top: 8px;
+    right: 15px;
   }
 
   ul.menu.open li {
-      position: relative;
-      top: 30px;
-      /* right: 20px; */
-      align-self: right;
-      text-align: right;
+    position: relative;
+    top: 30px;
+    align-self: right;
+    text-align: right;
   }
 
   .intro-section {
-    /* display: flex; */
-    /* margin: auto; */
     position: relative;
-    /* height: 100vh; */
     overflow: hidden;
   }
 
   .intro-pic {
     width: 100%;
     display: block; /* removes extra container space beneath image */
-    /* height: 100%; */
-    /* object-fit: cover; */
-    /* object-position: top 0 right 10px; */
-    /* object-position: center 40%;
-    transition: transform 0.3s ease; Adds smooth zoom effect */
-
-    /* margin: auto; */
   }
 
   .title-container {
@@ -128,28 +117,17 @@
   }
 
   .title-box {
-    /* background-color: #EFE9E4; */
     background-color: #D1C7C0;
-    /* position: absolute;
-    top: 5%;
-    left: 5%; */
     margin: auto;
     padding: 2vw 2vw;
     border-radius: 30px;
-    /* font-size: clamp(1rem, 2.5vw, 3rem); */
-    /* font-size: clamp(1rem, 4vw, 5rem)   */
     font-size: 4vw;
     white-space: nowrap;
 }
 
   .title-secondary {
-    /* background-color: #EFE9E4; */
     background-color: #D1C7C0;
-    /* position: absolute; */
-    /* top: 17%;
-    left: 5%; */
     margin-top: 5px;
-    /* padding: 5px 10px; */
     padding: 1vw 2vw;
     border-radius: 20px;
     font-size: 1.5vw;
@@ -161,7 +139,8 @@
     height: 150vh;
   }
 
-  @media (min-width:760px) {
+
+  @media (min-width:800px) {
 
     .brand {
         margin: 20px;
@@ -180,43 +159,53 @@
         display: none;
     }
 
+    .intro-section {
+        height: 95vh;
+    }
 
+    .intro-pic {
+        height: 100%;
+        object-fit: cover;
+        object-position: center 50%;
+    }
 
-
+    .title-box {
+        font-size: 6vw;
+    }
+  
+    .title-secondary {
+        font-size: 2vw;
+    }
   }
 
 
+  @media (min-width:1000px) {
+    .title-box {
+        font-size: clamp(2rem, 4vw, 4rem);
+        padding: 1vw 2vw;
+    }
+  
+    .title-secondary {
+        font-size: clamp(1rem, 1.5vw, 2rem);
+        padding: 0.5vw 1.5vw 0.5vw 2vw;
+    }
+  }
 
-  /* @media (max-width: 760px) {
-    ul.menu li a.nav-link {
-      display: none;
+
+  @media (min-width:1400px) {
+
+    .title-container {
+        top: 2%;
+        left: 2%;
     }
 
-    .dropdownLink {
-      display:block;
+    .title-box {
+        font-size: 3vw;
+        padding: 1vw 2vw;
     }
-
-    ul.menu.open {
-      flex-direction: column;
-      text-align: right;
-      padding-bottom: 20px;
+  
+    .title-secondary {
+        font-size: clamp(1rem, .5vw, 2rem);
+        padding: 0.5vw 1.5vw 0.5vw 2vw;
     }
-
-    ul.menu.open .nav-link {
-      display: block;
-    }
-
-    ul.menu li.dropdownLink, ul.menu.open li.dropdownLink {
-        display: block;
-        position: absolute;
-        top: 15px;
-        right: 20px;
-    }
-
-    ul.menu.open li {
-        position: relative;
-        top: 30px;
-        right: 20px;
-    }
-
-  } */
+  }
