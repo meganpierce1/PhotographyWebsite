@@ -157,6 +157,9 @@
     width: 100%;
   }
 
+  .about-text, .courtney-pic {
+    padding: 10px 30px;
+  }
   .about-text {
     flex: 1;
     padding: 10px 30px;
@@ -240,6 +243,10 @@
 
     .about-text p {
         font-size: 1.2rem;
+    }
+
+    .courtney-pic img {
+        padding: 0;
     }
   }
 
