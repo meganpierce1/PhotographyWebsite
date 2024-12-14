@@ -120,7 +120,7 @@
     background-color: #D1C7C0;
     margin: auto;
     padding: 2vw 2vw;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 4vw;
     white-space: nowrap;
 }
@@ -135,8 +135,52 @@
   }
 
   .second-section {
-    background-color: grey;
-    height: 150vh;
+    background-color: rgba(243, 242, 236, 1);
+    height: 80vh;
+  }
+
+  .about-section {
+    background-color: rgba(243, 242, 236, 1);
+    padding: 10px;
+  }
+
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+
+
+    max-width: 1140px;
+    margin: auto;
+    width: 100%;
+  }
+
+  .about-text {
+    flex: 1;
+    padding: 10px 30px;
+    /* text-align: center; */
+
+    /* max-width: 50%; */
+  }
+  
+  .about-text h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+  }
+
+  .courtney-pic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .courtney-pic img {
+    width: 400px;
+    height: auto;
+    border-radius: 70px;
+    margin: auto;
   }
 
 
@@ -171,6 +215,7 @@
 
     .title-box {
         font-size: 6vw;
+        border-radius: 30px;
     }
   
     .title-secondary {
