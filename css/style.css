@@ -4,6 +4,14 @@
     font-weight: normal;
     font-style: normal;
   }
+
+@font-face {
+font-family: 'Brittany';
+src: url('../fonts/BrittanySignature.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
  
  
  body {
@@ -121,13 +129,28 @@
   }
 
   .title-box {
+    font-family: "Brittany", sans-serif;
     background-color: #D1C7C0;
     margin: auto;
     padding: 2vw 2vw;
     border-radius: 20px;
     font-size: 4vw;
     white-space: nowrap;
-}
+  }
+
+  .title-name {
+    position: relative;
+  }
+
+  .title-box .title1 {
+    position: relative;
+  }
+
+  .title-box .title2 {
+    position: absolute;
+    top: 25px;
+    left: 0;
+  }
 
   .title-secondary {
     background-color: #D1C7C0;
@@ -293,6 +316,12 @@
     .title-box {
         font-size: 6vw;
         border-radius: 30px;
+    }
+
+    .title-box .title2 {
+        position: absolute;
+        top: 55px;
+        left: 0;
     }
   
     .title-secondary {
