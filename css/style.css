@@ -14,14 +14,18 @@
 
   .navbar {
     background-color: #D1C7C0;
+  }
+
+  .navbar-wrapper {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
     font-family: "Hanken Grotesk", sans-serif;
-    font-size: .8rem;
+    font-size: 1.3rem;
   }
 
   .brand, .dropdownLink {
@@ -187,7 +191,6 @@
     border-radius: 70px;
     padding: 20px;
     margin: auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   }
 
   .gallery-section {
@@ -254,17 +257,23 @@
 
   @media (min-width:800px) {
 
-    .brand {
-        margin: 20px;
+    .navbar-wrapper {
+        justify-content: center;
     }
 
-    .navbar {
-        font-size: 1rem;
+    .brand {
+        margin: 20px;
+        font-size: 1.4rem;
     }
 
     ul.menu li a.menu-item {
         display: block;
         order: 0;
+    }
+
+    .menu {
+        padding-right: 20px;
+        font-size: 1rem;
     }
 
     .dropdownLink a {
