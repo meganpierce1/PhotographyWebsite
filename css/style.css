@@ -124,17 +124,19 @@ font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: left;
-    top: 5%;
-    left: 5%;
+    /* top: 20px;
+    left: 5px; */
+    top: 3%;
+    left: 2%
   }
 
   .title-box {
     font-family: "Brittany", sans-serif;
     background-color: #D1C7C0;
     margin: auto;
-    padding: 2vw 2vw;
+    padding: 0 5px 20px;
+    font-size: 2.5rem;
     border-radius: 20px;
-    font-size: 4vw;
     white-space: nowrap;
   }
 
@@ -148,16 +150,18 @@ font-style: normal;
 
   .title-box .title2 {
     position: absolute;
-    top: 25px;
+    top: 45px;
     left: 0;
   }
 
   .title-secondary {
     background-color: #D1C7C0;
     margin-top: 5px;
-    padding: 1vw 2vw;
-    border-radius: 20px;
-    font-size: 1.5vw;
+    /* padding: 1vw 2vw; */
+    border-radius: 15px;
+    /* font-size: 1.5vw; */
+    font-size: .5rem;
+    padding: 1px 7px;
     align-self: flex-start;
   }
 
@@ -314,18 +318,20 @@ font-style: normal;
     }
 
     .title-box {
-        font-size: 6vw;
+        /* font-size: 6vw; */
+        font-size: 4rem;
+        padding: 10px 20px 20px;
         border-radius: 30px;
     }
 
     .title-box .title2 {
         position: absolute;
         top: 55px;
-        left: 0;
     }
   
     .title-secondary {
-        font-size: 2vw;
+        /* font-size: 2vw; */
+        font-size: 1rem;
     }
 
     .about-section {
@@ -375,13 +381,9 @@ font-style: normal;
 
   @media (min-width:1000px) {
     .title-box {
-        font-size: clamp(2rem, 4vw, 4rem);
-        padding: 1vw 2vw;
-    }
-  
-    .title-secondary {
-        font-size: clamp(1rem, 1.5vw, 2rem);
-        padding: 0.5vw 1.5vw 0.5vw 2vw;
+        /* font-size: clamp(2rem, 4vw, 4rem); */
+        /* padding: 1vw 2vw; */
+        font-size: 4.2rem;
     }
 
     .gallery {
@@ -410,20 +412,10 @@ font-style: normal;
   @media (min-width:1400px) {
 
     .title-container {
-        top: 2%;
+        top: 5%;
         left: 2%;
     }
-
-    .title-box {
-        font-size: 3vw;
-        padding: 1vw 2vw;
-    }
   
-    .title-secondary {
-        font-size: clamp(1rem, .5vw, 2rem);
-        padding: 0.5vw 1.5vw 0.5vw 2vw;
-    }
-
     .gallery {
         gap: 30px;
     }
