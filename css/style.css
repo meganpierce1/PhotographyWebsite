@@ -12,6 +12,13 @@ font-weight: normal;
 font-style: normal;
 }
 
+@font-face {
+  font-family: 'HKGrotesk';
+  src: url('../fonts/HKGrotesk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+
  
  
  body {
@@ -221,8 +228,10 @@ font-style: normal;
   }
 
   .gallery-section {
+    font-family: "HKGrotesk", sans-serif;
     background-color: #D1C7C0;
     padding: 30px 10px;
+    margin-bottom: 80px;
   }
 
   .gallery-wrapper {
@@ -280,7 +289,69 @@ font-style: normal;
     order: 100; /* just want these to appear last */
   }
 
+  .services-section {
+    font-family: "HKGrotesk", sans-serif;
+  }
 
+  /* Services */
+  .services-wrapper {
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+    margin-bottom: 80px;
+    padding: 60px 0;
+  }
+
+  .services-wrapper h1 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .services {
+    display: flex;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin: auto;
+    gap: 30px;
+    /* height: 60%; */
+    /* width: 100% */
+  }
+
+  .service {
+    position: relative;
+    flex: 1;
+    height: 1000px;
+
+    /* max-height: 60%; */
+    /* flex: 1; */
+  }
+
+  .service img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+  }
+
+  .service img:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+  }
+
+  .service h2 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    color: white;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: lighter;
+    font-stretch: wider;
+  }
 
   @media (min-width:800px) {
 
@@ -376,14 +447,51 @@ font-style: normal;
     .gallery-img:nth-child(4) { order: 3; }
     .gallery-img:nth-child(5) { order: 6; }
     .gallery-img:nth-child(6) { order: 5; }
-  }
+    
+    .services-wrapper {
+      max-width: 100%;
+      padding: 0 50px;
+      box-sizing: border-box;
+    }
+    
+    .services {
+      max-width: 100%;
+      gap: 30px;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .service {
+      max-width: 400px;
+      height: auto;
+      flex: 1 1 calc(50% - 20px); /* Default: 2 items per row with a gap */
+    }
 
+    .service img {
+      height: auto;
+    }
+
+    .service h2 {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      color: white;
+      font-size: 3.5rem;
+      text-align: center;
+      font-weight: lighter;
+      font-stretch: wider;
+    }
+  }
+    
 
   @media (min-width:1000px) {
     .title-box {
         /* font-size: clamp(2rem, 4vw, 4rem); */
         /* padding: 1vw 2vw; */
-        font-size: 4.2rem;
+        /* font-size: 4.2rem; */
     }
 
     .gallery {
@@ -406,6 +514,24 @@ font-style: normal;
     .gallery-img:nth-child(4) { order: 4; }
     .gallery-img:nth-child(5) { order: 6; }
     .gallery-img:nth-child(6) { order: 5; }
+
+    .service img {
+      object-fit: cover;
+    }
+
+    .service h2 {
+      font-size: 4.5rem;
+    }
+  }
+
+  @media (min-width:1200px) {
+    .service {
+      max-width:  200px;
+    }
+
+    .service h2 {
+      font-size: 2.2rem;
+    }
   }
 
 
@@ -418,5 +544,13 @@ font-style: normal;
   
     .gallery {
         gap: 30px;
+    }
+
+    .service {
+      max-width: 250px;
+    }
+    
+    .service h2 {
+      font-size: 2.7rem;
     }
   }
