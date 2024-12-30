@@ -19,6 +19,19 @@ font-style: normal;
   font-style: normal;
   }
 
+@font-face {
+  font-family: 'TanMonCheri';
+  src: url('../fonts/TanMonCheri.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  
+@font-face {
+  font-family: 'TheSeasons';
+  src: url('../fonts/TheSeasons.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  }
  
  
  body {
@@ -353,6 +366,71 @@ font-style: normal;
     font-stretch: wider;
   }
 
+  /* Contact Section */
+
+  .contact-section {
+    font-family: "TanMonCheri", sans-serif;
+    color: white;
+  }
+
+  .contact-wrapper {
+    position: relative;
+  }
+
+  .contact-background-image {
+    background-image: url('../Assets/contact-family_v.jpg');
+    width: 100%;
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+  }
+
+  .contact-info {
+    background-color: rgba(121,54,0,.5);
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 800px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 100px;
+  }
+
+  .contact-info div {
+    transform: translateY(-15px);
+  }
+
+  .contact-info h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  .contact-info h1 {
+    font-family: "TheSeasons", sans-serif;
+    font-weight: lighter;
+    font-size: 4rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+
+  .book-btn {
+    border: 3px solid #FFFFFF;
+    background-color: transparent;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1rem;
+    
+
+  }
+
+
   @media (min-width:800px) {
 
     .navbar-wrapper {
@@ -521,6 +599,18 @@ font-style: normal;
 
     .service h2 {
       font-size: 4.5rem;
+    }
+
+    .contact-background-image {
+      background-image: url('../Assets/contact-family_h.jpg');
+    }
+
+    .contact-info {
+      width: 50%;
+    }
+
+    .contact-info div {
+      transform: translateY(15px);
     }
   }
 
