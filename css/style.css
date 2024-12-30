@@ -219,6 +219,7 @@ font-style: normal;
   
   .about-text h1 {
     font-size: 4rem;
+    font-weight: lighter;
     margin-bottom: 10px;
   }
 
@@ -241,10 +242,9 @@ font-style: normal;
   }
 
   .gallery-section {
-    font-family: "HKGrotesk", sans-serif;
+    font-family: "TheSeasons", sans-serif;
     background-color: #D1C7C0;
-    padding: 30px 10px;
-    margin-bottom: 80px;
+    padding: 30px 10px 100px;
   }
 
   .gallery-wrapper {
@@ -255,7 +255,10 @@ font-style: normal;
 
   .gallery-wrapper h1 {
     text-align: center;
-    padding-bottom: 50px;
+    font-weight: lighter;
+    padding: 30px 0 50px;
+    margin: 0;
+    font-size: 2.5rem;
   }
 
   .gallery {
@@ -304,6 +307,7 @@ font-style: normal;
 
   .services-section {
     font-family: "HKGrotesk", sans-serif;
+    background-color: #EFE9E4;
   }
 
   /* Services */
@@ -311,13 +315,14 @@ font-style: normal;
     width: 100%;
     max-width: 1600px;
     margin: auto;
-    margin-bottom: 80px;
-    padding: 60px 0;
+    padding-bottom: 80px;
   }
 
   .services-wrapper h1 {
     text-align: center;
-    margin-bottom: 60px;
+    font-weight: lighter;
+    padding: 60px 0;
+    margin: 0;
   }
 
   .services {
@@ -421,11 +426,12 @@ font-style: normal;
   }
 
   .book-btn {
-    border: 3px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
     background-color: transparent;
     color: white;
     padding: 10px 30px;
-    font-size: 1rem;
+    font-size: 1.3rem;
+    font-family: "TheSeasons", sans-serif;
     
 
   }
@@ -457,7 +463,7 @@ font-style: normal;
     }
 
     .intro-section {
-        height: 95vh;
+        height: 90vh;
     }
 
     .intro-pic {
@@ -528,7 +534,6 @@ font-style: normal;
     
     .services-wrapper {
       max-width: 100%;
-      padding: 0 50px;
       box-sizing: border-box;
     }
     
@@ -616,11 +621,17 @@ font-style: normal;
 
   @media (min-width:1200px) {
     .service {
-      max-width:  200px;
+      max-width:  245px;
     }
 
     .service h2 {
       font-size: 2.2rem;
+    }
+  }
+
+  @media (min-width: 1300px) {
+    .service {
+      max-width: 270px;
     }
   }
 
@@ -637,10 +648,22 @@ font-style: normal;
     }
 
     .service {
-      max-width: 250px;
+      max-width: 280px;
     }
     
     .service h2 {
       font-size: 2.7rem;
+    }
+  }
+
+  @media (min-width:1610px) {
+    .service {
+      max-width: 350px;
+    }
+  }
+
+  @media (min-width:2100px) {
+    .contact-info, .contact-background-image {
+      height: 1000px;
     }
   }
