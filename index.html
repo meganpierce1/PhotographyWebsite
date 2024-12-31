@@ -102,6 +102,7 @@
     </div>
   </div>
 
+  <!-- Contact Section -->
 
   <div class="contact-section">
     <div class="contact-wrapper">
@@ -113,11 +114,48 @@
           <p>208-615-1787</p>
           <p>courtney.pierce824@gmail.com</p>
         </div>
-        <button class="book-btn">Book Me</button>
+        <button class="book-btn" onclick="showForm()">Book Me</button>
       </div>
     </div>
   </div>
+
+  <!-- Contact Form -->
+
+  <div class="contactform-overlay" id="form">
+    <div class="contactform-background-image"></div>
+    <div class="contact-form">
+      <h2>Let's do this!</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Courtney Smith" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input class="form-input" type="text" id="email" name="email" placeholder="CourtneyPierce824@gmail.com" required>
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number:</label>
+          <input class="form-input" type="text" id="phone" name="phone" placeholder="208.615.1787" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Tell me about who the photos are for and your vision for the shoot!</label>
+          <textarea class="form-input" type="text-area" id="description" name="description" rows="6" placeholder="We’re a family of four and we’d love to have a mix of posed and candid shots in Utah Valley. We’re hoping to schedule the shoot when the fall colors are vibrant and really stand out." required></textarea>
+        </div>
+        <div class="submit-btn-wrapper">
+          <button class="form-btn" onclick="submitForm()">Submit</button>
+        </div>
+        <div class="exit-btn-wrapper">
+          <button class="form-btn" onclick="hideForm()">&#10006;</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
 </body>
+
 
 <script
 src="https://code.jquery.com/jquery-3.7.1.min.js"
