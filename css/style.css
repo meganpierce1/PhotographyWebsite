@@ -166,7 +166,7 @@ ul.menu.open li {
   background-color: #D1C7C0;
   margin: auto;
   padding: 0 5px 20px;
-  font-size: 3.5rem;
+  font-size: 56px;
   border-radius: 20px;
   white-space: nowrap;
 }
@@ -424,6 +424,8 @@ ul.menu.open li {
 
 .contact-info p {
   font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
 }
 
 .book-btn {
@@ -641,7 +643,7 @@ ul.menu.open li {
 
 @media (min-width:700px) {
   .title-box {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 
   .title-secondary {
@@ -699,7 +701,7 @@ ul.menu.open li {
   }
 
   .title-box {
-    font-size: 4rem;
+    font-size: 64px;
     padding: 10px 20px 20px;
     border-radius: 30px;
   }
@@ -894,7 +896,7 @@ ul.menu.open li {
   }
 
   .title-box {
-    font-size: 7rem;
+    font-size: 112px;
     top: 90px;
   }
 
