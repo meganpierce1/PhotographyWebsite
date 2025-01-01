@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'Bogart';
-    src: url('../fonts/Bogart-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
   font-family: 'Brittany';
   src: url('../fonts/BrittanySignature.ttf') format('truetype');
   font-weight: normal;
@@ -36,7 +29,7 @@
  
 body {
   margin: 0;
-  font-family: "Bogart", sans-serif;
+  font-family: "HKGrotesk", sans-serif;
   color: #6C6040;
 }
 
@@ -66,10 +59,6 @@ body.no-scroll {
   color: #6C6040;
 }
 
-.brand, .dropdownLink {
-  /* margin: 10px; */
-}
-
 .brand {
   margin: 10px;
   font-weight: bold;
@@ -84,13 +73,6 @@ body.no-scroll {
   padding: 0;
   margin: 10px;
 }
-
-/* .nav-link {
-  text-decoration: none;
-  margin: 10px;
-  color: #6C6040;
-} */
-
 
 .menu .menu-item {
   padding: 5px;
@@ -151,11 +133,20 @@ ul.menu.open li {
 .intro-section {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 70vh;
+  text-align: center;
 }
 
 .intro-pic {
   width: 100%;
+  height: 100%;
   display: block; /* removes extra container space beneath image */
+  background-image: url('../Assets/PierceFamily_v.jpg');
+  object-fit: cover;
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
 }
 
 .title-container {
@@ -163,8 +154,6 @@ ul.menu.open li {
   display: flex;
   flex-direction: column;
   align-items: left;
-  /* top: 20px;
-  left: 5px; */
   top: 3%;
   left: 2%
 }
@@ -174,7 +163,7 @@ ul.menu.open li {
   background-color: #D1C7C0;
   margin: auto;
   padding: 0 5px 20px;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   border-radius: 20px;
   white-space: nowrap;
 }
@@ -196,10 +185,8 @@ ul.menu.open li {
 .title-secondary {
   background-color: #D1C7C0;
   margin-top: 5px;
-  /* padding: 1vw 2vw; */
   border-radius: 15px;
-  /* font-size: 1.5vw; */
-  font-size: .5rem;
+  font-size: .8rem;
   padding: 1px 7px;
   align-self: flex-start;
 }
@@ -288,9 +275,8 @@ ul.menu.open li {
 .gallery-img {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Adjust radius to fit the style */
+  border-radius: 8px;
   object-fit: cover;
-
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
@@ -323,7 +309,6 @@ ul.menu.open li {
 }
 
 .services-section {
-  /* font-family: "HKGrotesk", sans-serif; */
   font-family: "TheSeasons", serif;
   background-color: #EFE9E4;
 }
@@ -338,29 +323,24 @@ ul.menu.open li {
 
 .services-wrapper h1 {
   text-align: center;
-  padding: 60px 0;
+  padding: 60px 20px;
   margin: 0;
+  font-size: 2.5rem;
 }
 
 .services {
   display: flex;
   justify-content: center;
-  /* flex-wrap: wrap; */
   flex-wrap: nowrap;
   flex-direction: column;
   margin: auto;
   gap: 30px;
-  /* height: 60%; */
-  /* width: 100% */
 }
 
 .service {
   position: relative;
   flex: 1;
   height: 1000px;
-
-  /* max-height: 60%; */
-  /* flex: 1; */
 }
 
 .service img {
@@ -453,15 +433,15 @@ ul.menu.open li {
 }
 
 .book-btn:hover {
-  background-color: white; /* Change background to white */
-  color: #333; /* Change text color to a contrasting dark shade */
-  transform: scale(1.05); /* Slight zoom-in effect */
+  background-color: white;
+  color: #333;
+  transform: scale(1.05);
 }
 
 .book-btn:active {
-  background-color: #ccc; /* Light gray for pressed effect */
-  color: #000; /* Darker text color */
-  transform: scale(0.98); /* Slightly shrink for pressed feedback */
+  background-color: #ccc;
+  color: #000;
+  transform: scale(0.98);
 }
 
 .contactform-overlay {
@@ -474,7 +454,6 @@ ul.menu.open li {
   display: none;
 }
 
-
 .contactform-background-image {
   background-image: url('../Assets/contactForm_h.jpg');
   width: 100%;
@@ -486,20 +465,16 @@ ul.menu.open li {
 
 .contact-form {
   position: relative;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
-  backdrop-filter: blur(10px); /* Creates the blur effect */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px); /* For Safari support */
-  /* width: 50vw;
-  height: 80vh;
-  min-width: 400px;
-  min-height: 600px; */
   width: 40vw;
   min-width: 400px;
   max-width: 1600px;
-  position: absolute; /* Use absolute or fixed positioning */
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the div */
+  transform: translate(-50%, -50%);
   color: black;
   font-family: "HKGrotesk", sans-serif;
   padding: 30px 50px 50px;
@@ -525,7 +500,6 @@ ul.menu.open li {
 }
 
 .form-group textarea::placeholder, .form-group input::placeholder{
-  /* color: rgba(256,256,256,.7); */
   color: rgba(0,0,0,.6);
   font-style: italic;
 }
@@ -610,9 +584,6 @@ ul.menu.open li {
   right: -25px;
   transform: rotate(-90deg) translate3d(50%, -50%, 0);
   z-index: 10000;
-  /* width: 100px; */
-  /* height: 100px; */
-  /* background-color: #D1C7C0; */
   background-color: rgba(209, 199, 192, .7);
   padding: 1px 5px;
   border-radius: 10px;
@@ -622,7 +593,6 @@ ul.menu.open li {
 .fixed-insta-icon {
   display: flex;
   font-size: 1rem;
-  /* color: #6C6040; */
   color: #5a2f17;
   text-decoration: none;
   justify-content: center;
@@ -635,94 +605,110 @@ ul.menu.open li {
   color: #321a0d;
 }
 
+@media (min-width:700px) {
+  .title-box {
+    font-size: 2.5rem;
+  }
 
+  .title-secondary {
+    font-size: .6rem;
+  }
+}
 
 @media (min-width:800px) {
 
   .navbar-wrapper {
-      justify-content: center;
+    justify-content: center;
   }
 
   .brand {
-      margin: 20px;
-      font-size: 1.4rem;
+    margin: 20px;
+    font-size: 1.4rem;
   }
 
   ul.menu li a.menu-item {
-      display: block;
-      order: 0;
+    display: block;
+    order: 0;
   }
 
   .menu {
-      padding-right: 20px;
-      font-size: 1rem;
+    padding-right: 20px;
+    font-size: 1rem;
   }
 
   .dropdownLink a, .insta-icon {
-      display: none;
+    display: none;
   }
 
   .intro-section {
-      height: 90vh;
+    height: 90vh;
   }
 
   .intro-pic {
-      height: 100%;
-      object-fit: cover;
-      object-position: center 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 50%;
+    background-image: url('../Assets/PierceFamily_h.jpg');
+    background-position: center;
+  }
+
+  .intro-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 90vh;
+    text-align: center;
   }
 
   .title-box {
-      /* font-size: 6vw; */
-      font-size: 4rem;
-      padding: 10px 20px 20px;
-      border-radius: 30px;
+    font-size: 4rem;
+    padding: 10px 20px 20px;
+    border-radius: 30px;
   }
 
   .title-box .title2 {
-      position: absolute;
-      top: 55px;
+    position: absolute;
+    top: 55px;
   }
 
   .title-secondary {
-      /* font-size: 2vw; */
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .about-section {
-      padding: 50px;
+    padding: 50px;
   }
 
   .about-wrapper {
-      flex-direction: row;
-      text-align: left;
+    flex-direction: row;
+    text-align: left;
   }
 
   .about-text h1 {
-      font-size: 5rem;
-      margin: 25px 0;
+    font-size: 5rem;
+    margin: 25px 0;
   }
 
   .about-text p {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 
   .courtney-pic img {
-      padding: 0;
+    padding: 0;
   }
 
   .gallery {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet sizes */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet sizes */
   }
 
   .gallery-ver {
-      grid-row: span 2;
-      grid-column: span 1;
+    grid-row: span 2;
+    grid-column: span 1;
   }
   
   .gallery-hor {
-      grid-row: span 1;
-      grid-column: span 1;
+    grid-row: span 1;
+    grid-column: span 1;
   }
 
   .gallery-img:nth-child(1) { order: 1; }
@@ -774,24 +760,18 @@ ul.menu.open li {
   
 
 @media (min-width:1000px) {
-  .title-box {
-      /* font-size: clamp(2rem, 4vw, 4rem); */
-      /* padding: 1vw 2vw; */
-      /* font-size: 4.2rem; */
-  }
-
   .gallery {
-      grid-template-columns: repeat(3, 1fr); /* 2 columns for tablet sizes */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .gallery-ver {
-      grid-row: span 2;
-      grid-column: span 1;
+    grid-row: span 2;
+    grid-column: span 1;
   }
   
   .gallery-hor {
-      grid-row: span 1;
-      grid-column: span 1;
+    grid-row: span 1;
+    grid-column: span 1;
   }
 
   .gallery-img:nth-child(1) { order: 1; }
@@ -842,8 +822,8 @@ ul.menu.open li {
 @media (min-width:1400px) {
 
   .title-container {
-      top: 5%;
-      left: 2%;
+    top: 5%;
+    left: 2%;
   }
 
   .gallery {
