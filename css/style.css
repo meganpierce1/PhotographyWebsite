@@ -165,7 +165,7 @@ ul.menu.open li {
   font-family: "Brittany", sans-serif;
   background-color: #D1C7C0;
   margin: auto;
-  padding: 0 5px 20px;
+  padding: 0 5px 30px;
   font-size: 56px;
   border-radius: 20px;
   white-space: nowrap;
@@ -616,6 +616,10 @@ ul.menu.open li {
 
   .insta-icon {
     right: 55px;
+  }
+
+  .title-box {
+    padding: 0 5px 20px;
   }
 
   .about-text, .courtney-pic {
